@@ -7,16 +7,20 @@
   let num2;
   let result;
 
+  let screen = document.querySelector(".calculator-screen");
+
   function pushNumber(e) {
-    alert(e.target.value);
+    //alert(e.target.value);
     calculation.push(e.target.value); // parseInt(e.target.value, 10));
+    screen.value = calculation.toString().split(",").join("");
   }
   function pushOperator(e) {
-    alert(e.target.value);
+    //alert(e.target.value);
     calculation.push(e.target.value);
+    screen.value = calculation.toString().split(",").join("");
   }
   function calculate(e) {
-    alert(calculation.toString().split(",").join(""));
+    //alert(calculation.toString().split(",").join(""));
     console.log(typeof calculation);
     for (let i = 0; i < calculation.length; i++) {
       if (
@@ -42,8 +46,8 @@
       result = num1 - num2;
     }
 
-    alert(result);
-
+    //alert(result);
+    screen.value = result;
     calculation = []; //reset calculation for next one
     console.log("end calculate");
   }
