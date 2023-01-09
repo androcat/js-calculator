@@ -17,6 +17,9 @@
   function pushOperator(e) {
     //alert(e.target.value);
     calculation.push(e.target.value);
+    if (e.target.value === "clear") {
+      calculation = [];
+    }
     screen.value = calculation.toString().split(",").join("");
   }
   function calculate(e) {
