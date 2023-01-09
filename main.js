@@ -30,8 +30,8 @@
         calculation[i] === "-"
       ) {
         operator = calculation[i];
-        num1 = calculation.slice(0, i).join("");
-        num2 = calculation.slice(i + 1).join("");
+        num1 = parseFloat(calculation.slice(0, i).join(""));
+        num2 = parseFloat(calculation.slice(i + 1).join(""));
         //console.log("num1:", num1);
         //console.log("num2:", num2);
       }
